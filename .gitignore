@@ -1,41 +1,39 @@
-# Compiled Lua sources
-luac.out
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Enter = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
 
-# Precompiled Headers
-*.gch
-*.pch
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.371769398, 0, 0.543247342, 0)
+Frame.Size = UDim2.new(0, 242, 0, 157)
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+Enter.Name = "Enter"
+Enter.Parent = Frame
+Enter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Enter.Position = UDim2.new(0.119834714, 0, 0.624203801, 0)
+Enter.Size = UDim2.new(0, 200, 0, 50)
+Enter.Font = Enum.Font.SourceSans
+Enter.TextColor3 = Color3.fromRGB(0, 0, 0)
+Enter.TextSize = 14.000
+Enter.MouseButton1Click:Connect(function()
+	if [TextBox].Text == "1ds01Xsp02" then
+		frame.Visible = False
+		getgenv().plsnochatshit = true
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/HazeWasTaken/Loaf-Group-Rise-Up/main/autorob.lua", true))()
+	end
+end)
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Position = UDim2.new(0.119834714, 0, 0.191082805, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
